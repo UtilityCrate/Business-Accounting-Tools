@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <link rel="icon" type="image/x-icon" href="favicon-16x16.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3808373705183829"
+     crossorigin="anonymous"></script>
+    <title>UtilityCrate - Business & Accounting Tools </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#1E40AF',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-50">
+ <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+          <!-- नया PNG लोगो कोड -->
+<div class="flex items-center">
+    <img src="favicon-32x32.png" class="h-8 w-8" alt="UtilityCrate Logo">
+    <span class="ml-2 text-xl font-bold text-gray-800">UtilityCrate</span>
+</div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-primary font-medium">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-primary transition">About Us</a>
+                <a href="#tools" class="text-gray-600 hover:text-primary transition">Tools</a>
+                <a href="contact.html" class="text-gray-600 hover:text-primary transition">Contact</a>
+            </nav>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#" class="block py-2 text-primary font-medium">Home</a>
+            <a href="#about" class="block py-2 text-gray-600 hover:text-primary transition">About Us</a>
+            <a href="#tools" class="block py-2 text-gray-600 hover:text-primary transition">Tools</a>
+            <a href="contact.html" class="block py-2 text-gray-600 hover:text-primary transition">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Business & Accounting Tools</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Tool: Markup vs Margin Calculator -->
+<div class="group block bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition duration-300 border border-gray-100 hover:border-blue-600">
+  <div class="text-blue-600 mb-4">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2l4-4m1-6H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6z" />
+    </svg>
+  </div>
+  <h3 class="text-xl font-semibold mb-2 text-gray-800 group-hover:text-blue-600">Markup vs Margin Calculator</h3>
+  <p class="text-gray-600 mb-4">Convert between markup and margin percentages.</p>
+
+  <div class="space-y-3">
+    <select id="calcType" class="w-full p-2 border border-gray-300 rounded-lg">
+      <option value="markupToMargin">Markup → Margin</option>
+      <option value="marginToMarkup">Margin → Markup</option>
+    </select>
+
+    <input type="number" id="percentInput" placeholder="Enter % value" class="w-full p-2 border border-gray-300 rounded-lg" />
+
+    <button onclick="convertMarkupMargin()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Convert</button>
+  </div>
+
+  <div id="markupMarginResult" class="mt-4 text-gray-700 text-sm"></div>
+</div>
+<!-- Tool: Markup/Margin Price–Cost Calculator -->
+<div class="group block bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition duration-300 border border-gray-100 hover:border-blue-600 mt-6">
+  <div class="text-blue-600 mb-4">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a4 4 0 00-8 0v2a4 4 0 00-2 3.5V18a2 2 0 002 2h8a2 2 0 002-2v-5.5a4 4 0 00-2-3.5z" />
+    </svg>
+  </div>
+  <h3 class="text-xl font-semibold mb-2 text-gray-800 group-hover:text-blue-600">Price/Cost Calculator</h3>
+  <p class="text-gray-600 mb-4">Calculate missing Cost or Price using Markup or Margin %.</p>
+
+  <div class="space-y-3">
+    <select id="calcMode" class="w-full p-2 border border-gray-300 rounded-lg">
+      <option value="costFromPriceMarkup">Cost from Price & Markup %</option>
+      <option value="priceFromCostMarkup">Price from Cost & Markup %</option>
+      <option value="costFromPriceMargin">Cost from Price & Margin %</option>
+      <option value="priceFromCostMargin">Price from Cost & Margin %</option>
+    </select>
+
+    <input type="number" id="priceCostInput1" placeholder="Enter Value 1 (Price or Cost)" class="w-full p-2 border border-gray-300 rounded-lg" />
+    <input type="number" id="percentValue" placeholder="Enter % (Markup or Margin)" class="w-full p-2 border border-gray-300 rounded-lg" />
+
+    <button onclick="calcPriceCost()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Calculate</button>
+  </div>
+
+  <div id="priceCostResult" class="mt-4 text-gray-700 text-sm"></div>
+</div>
+<!-- Tool: ROI Calculator -->
+<div class="group block bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition duration-300 border border-gray-100 hover:border-blue-600 mt-6">
+  <div class="text-blue-600 mb-4">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  </div>
+  <h3 class="text-xl font-semibold mb-2 text-gray-800 group-hover:text-blue-600">ROI Calculator</h3>
+  <p class="text-gray-600 mb-4">Calculate Return on Investment (ROI) using Gain and Investment Amount.</p>
+
+  <div class="space-y-3">
+    <input type="number" id="gainFromInvestment" placeholder="Gain from Investment (₹)" class="w-full p-2 border border-gray-300 rounded-lg" />
+    <input type="number" id="costOfInvestment" placeholder="Cost of Investment (₹)" class="w-full p-2 border border-gray-300 rounded-lg" />
+
+    <button onclick="calculateROI()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Calculate</button>
+  </div>
+
+  <div id="roiResult" class="mt-4 text-gray-700 text-sm"></div>
+</div>
+<!-- Tool: Inventory Turnover Ratio Calculator -->
+<div class="group block bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition duration-300 border border-gray-100 hover:border-blue-600 mt-6">
+  <div class="text-blue-600 mb-4">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18v4H3V3zm0 6h18v12H3V9z" />
+    </svg>
+  </div>
+  <h3 class="text-xl font-semibold mb-2 text-gray-800 group-hover:text-blue-600">Inventory Turnover Ratio</h3>
+  <p class="text-gray-600 mb-4">Calculate how many times inventory is sold and replaced over a period.</p>
+
+  <div class="space-y-3">
+    <input type="number" id="costOfGoodsSold" placeholder="Cost of Goods Sold (₹)" class="w-full p-2 border border-gray-300 rounded-lg" />
+    <input type="number" id="averageInventory" placeholder="Average Inventory (₹)" class="w-full p-2 border border-gray-300 rounded-lg" />
+
+    <button onclick="calculateInventoryTurnover()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Calculate</button>
+  </div>
+
+  <div id="inventoryTurnoverResult" class="mt-4 text-gray-700 text-sm"></div>
+</div>
+<!-- Tool: Working Capital Calculator -->
+<div class="group block bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition duration-300 border border-gray-100 hover:border-blue-600 mt-6">
+  <div class="text-blue-600 mb-4">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h4v11H3zM17 3h4v18h-4zM10 14h4v7h-4z" />
+    </svg>
+  </div>
+  <h3 class="text-xl font-semibold mb-2 text-gray-800 group-hover:text-blue-600">Working Capital Calculator</h3>
+  <p class="text-gray-600 mb-4">Calculate Working Capital = Current Assets - Current Liabilities</p>
+
+  <div class="space-y-3">
+    <input type="number" id="currentAssets" placeholder="Current Assets (₹)" class="w-full p-2 border border-gray-300 rounded-lg" />
+    <input type="number" id="currentLiabilities" placeholder="Current Liabilities (₹)" class="w-full p-2 border border-gray-300 rounded-lg" />
+
+    <button onclick="calculateWorkingCapital()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Calculate</button>
+  </div>
+
+  <div id="workingCapitalResult" class="mt-4 text-gray-700 text-sm"></div>
+</div>
+<!-- Tool: Contribution Margin Calculator -->
+<div class="group block bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition duration-300 border border-gray-100 hover:border-blue-600 mt-6">
+  <div class="text-blue-600 mb-4">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M12 20h.01M4 4h16v16H4V4z" />
+    </svg>
+  </div>
+  <h3 class="text-xl font-semibold mb-2 text-gray-800 group-hover:text-blue-600">Contribution Margin Calculator</h3>
+  <p class="text-gray-600 mb-4">Calculate Contribution Margin = Sales – Variable Costs</p>
+
+  <div class="space-y-3">
+    <input type="number" id="sales" placeholder="Total Sales (₹)" class="w-full p-2 border border-gray-300 rounded-lg" />
+    <input type="number" id="variableCosts" placeholder="Variable Costs (₹)" class="w-full p-2 border border-gray-300 rounded-lg" />
+
+    <button onclick="calculateContributionMargin()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Calculate</button>
+  </div>
+
+  <div id="contributionMarginResult" class="mt-4 text-gray-700 text-sm"></div>
+</div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Logo and Description -->
+                 <div>
+                    <div class="flex items-center">
+    <img src="favicon-32x32.png" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                        <span class="ml-2 text-xl font-bold">UtilityCrate</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Your one-stop solution for all daily calculation needs.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#tools" class="text-gray-400 hover:text-white transition">Tools</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-2xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 UtilityCrate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    <!-- Browser Image Compression Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/browser-image-compression/2.0.0/browser-image-compression.js"></script>
+    <!-- Image Compressor Script -->
+    <script src="Markup-vs-Margin-Calculator.js"></script>
+     <script src="Price–Cost-Calculator.js"></script>
+     <script src="ROI-Calculator.js"></script>
+      <script src="Inventory-Turnover-Ratio-Calculator.js"></script>
+        <script src="Working-Capital-Calculator.js"></script>
+         <script src="Contribution-Margin-Calculator.js"></script>
+           <script src="Compound-Interest-Calculator.js"></script>
+           <script src="Profit-Margin-Calculator.js"></script>
+            <script src="Break-Even-Point-Calculator.js"></script>
+</body>
+</html>
